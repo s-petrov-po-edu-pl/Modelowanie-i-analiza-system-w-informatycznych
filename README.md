@@ -48,5 +48,5 @@ python FileCopyUtility.py source_folder destination_folder
 
 Run:
 ```
-java FileCopyUtility source_folder destination_folder
+java FileCopyUtility.java source_folder destination_folder
 ```
