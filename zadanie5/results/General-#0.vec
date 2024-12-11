@@ -1,0 +1,44 @@
+version 3
+run General-0-20241212-00:07:14-5540
+attr configname General
+attr datetime 20241212-00:07:14
+attr datetimef 20241212-000714
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Symulator
+attr processid 5540
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Symulator
+config *.klient.wielkoscZadania normal(5000,333)
+config *.klient.czasMiedzyZadaniami exponential(0.2)
+config **.cpu.jednostkowyCzasObslugi 0.000240
+config **.hdd.jednostkowyCzasObslugi 0.000410
+
+vector 0 Symulator.Statistics czasyOpowiedzi ETV
+0	20	0.0088938	0.0088938
+0	26	0.01430308	0.01430308
+0	37	0.260085231609	0.00889908
+0	48	0.370290288943	0.00889444
+0	59	0.399205107177	0.00889604
+0	70	0.467319441687	0.00889796
+0	81	0.530986829855	0.00889412
+0	97	0.843905671584	0.00889172
+0	103	0.849316791584	0.013444858204
+0	114	0.974692425028	0.00890196
+0	130	1.057002264277	0.0088962000000001
+0	136	1.062413304277	0.01022212232
+0	147	1.36442295055	0.0089002
+0	158	1.691127927692	0.00890276
+0	169	1.772484202138	0.0088986000000002
+0	180	1.819464642228	0.0088976399999998
+0	191	1.896268174063	0.0088966799999999
+0	202	2.04665403057	0.0088992400000003
+

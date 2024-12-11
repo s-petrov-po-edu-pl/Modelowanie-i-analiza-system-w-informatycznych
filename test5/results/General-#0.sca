@@ -1,0 +1,40 @@
+version 3
+run General-0-20241211-22:57:28-2848
+attr configname General
+attr datetime 20241211-22:57:28
+attr datetimef 20241211-225728
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Symulator
+attr processid 2848
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Symulator
+config *.klient*.czasMiedzyZadaniami exponential(0.2)
+config *.klient*.wielkoscZadania normal(5000,333)
+config *.serwer.cpu.jednostkowyCzasObslugi 0.1
+config *.serwer.hdd.jednostkowyCzasObslugi 1
+
+par Symulator.klient1 typename "\"Klient\""
+par Symulator.klient1 czasMiedzyZadaniami exponential(0.2)
+par Symulator.klient1 wielkoscZadania "normal(5000, 333)"
+par Symulator.klient1 idKlienta 1
+par Symulator.klient2 typename "\"Klient\""
+par Symulator.klient2 czasMiedzyZadaniami exponential(0.2)
+par Symulator.klient2 wielkoscZadania "normal(5000, 333)"
+par Symulator.klient2 idKlienta 2
+par Symulator.serwer.cpu typename "\"Procesor\""
+par Symulator.serwer.cpu jednostkowyCzasObslugi 0.1
+par Symulator.serwer.hdd typename "\"Dysk\""
+par Symulator.serwer.hdd jednostkowyCzasObslugi 1
+par Symulator.serwer typename "\"Serwer\""
+par Symulator.switch typename "\"Switch\""
+par Symulator typename "\"Symulator\""
+

@@ -1,0 +1,80 @@
+version 3
+run General-0-20241212-00:07:14-5540
+attr configname General
+attr datetime 20241212-00:07:14
+attr datetimef 20241212-000714
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Symulator
+attr processid 5540
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Symulator
+config *.klient.wielkoscZadania normal(5000,333)
+config *.klient.czasMiedzyZadaniami exponential(0.2)
+config **.cpu.jednostkowyCzasObslugi 0.000240
+config **.hdd.jednostkowyCzasObslugi 0.000410
+
+par Symulator.router.doKlienta[0].channel typename "\"ned.DatarateChannel\""
+par Symulator.router.doKlienta[0].channel disabled false
+attr mutable ""
+par Symulator.router.doKlienta[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Symulator.router.doKlienta[0].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par Symulator.router.doKlienta[0].channel ber 0
+attr mutable ""
+par Symulator.router.doKlienta[0].channel per 0
+attr mutable ""
+par Symulator.router.doKlienta[1].channel typename "\"ned.DatarateChannel\""
+par Symulator.router.doKlienta[1].channel disabled false
+attr mutable ""
+par Symulator.router.doKlienta[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Symulator.router.doKlienta[1].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par Symulator.router.doKlienta[1].channel ber 0
+attr mutable ""
+par Symulator.router.doKlienta[1].channel per 0
+attr mutable ""
+par Symulator.router.doSerwera.channel typename "\"ned.DatarateChannel\""
+par Symulator.router.doSerwera.channel disabled false
+attr mutable ""
+par Symulator.router.doSerwera.channel delay 0s
+attr mutable ""
+attr unit s
+par Symulator.router.doSerwera.channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par Symulator.router.doSerwera.channel ber 0
+attr mutable ""
+par Symulator.router.doSerwera.channel per 0
+attr mutable ""
+par Symulator.klient1 typename "\"Klient\""
+par Symulator.klient1 address 0
+par Symulator.klient1 czasMiedzyZadaniami exponential(0.2)
+par Symulator.klient1 wielkoscZadania "normal(5000, 18.2483)"
+par Symulator.klient2 typename "\"Klient\""
+par Symulator.klient2 address 1
+par Symulator.klient2 czasMiedzyZadaniami exponential(0.2)
+par Symulator.klient2 wielkoscZadania "normal(5000, 18.2483)"
+par Symulator.serwer.cpu typename "\"Procesor\""
+par Symulator.serwer.cpu jednostkowyCzasObslugi 0.00024
+par Symulator.serwer.hdd typename "\"Dysk\""
+par Symulator.serwer.hdd jednostkowyCzasObslugi 0.00041
+par Symulator.serwer typename "\"Serwer\""
+par Symulator.router typename "\"KartaSieciowa\""
+par Symulator.Statistics typename "\"Statystyki\""
+par Symulator typename "\"Symulator\""
+
